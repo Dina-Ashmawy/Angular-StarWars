@@ -19,5 +19,5 @@ Run `ng generate component component-name` to generate a new component. You can 
 Add unit test and integration test for this project
 
 **HINT: I attached some evidence in evidence folder**
-Path: https://github.com/Dina-Ashmawy/Angular-StarWars/tree/master/evidence
+=> https://github.com/Dina-Ashmawy/Angular-StarWars/tree/master/evidence
 
