@@ -1,0 +1,7 @@
+<app-movie
+  class="flex-container"
+  *ngFor="let movie of movies$ | async"
+  [movie]="movie"
+>
+  <label>movie.title</label>
+</app-movie>

@@ -1,0 +1,32 @@
+<mat-card *ngIf="character$ | async as character">
+  <mat-card-header>
+    <mat-card-title>
+      {{ character.name }}
+    </mat-card-title>
+    <mat-card-subtitle>{{ character.gender }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <h4 class="inline-header">Skin Color:</h4>
+      <label>{{ character.skin_color }}</label>
+    </div>
+    <div>
+      <h4 class="inline-header">Eye Color:</h4>
+      <label>{{ character.eye_color }}</label>
+    </div>
+    <div>
+      <h4 class="inline-header">Hair Color:</h4>
+      <label>{{ character.hair_color }}</label>
+    </div>
+    <div>
+      <h4 class="inline-header">Height:</h4>
+      <label>{{ character.height }}</label>
+    </div>
+    <div class="films-list-container">
+      <h4>Films:</h4>
+      <div class="film-name" *ngFor="let item of films$ | async">
+        <span (click)="NavigateToFilm(item)">{{ item.title }}</span>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

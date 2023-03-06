@@ -1,0 +1,22 @@
+.inline-header {
+  display: inline-block;
+  margin: 10px;
+}
+
+.films-list-container {
+  margin: 10px;
+  overflow: auto;
+  max-height: 50vh;
+  h4 {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  .film-name {
+    padding: 5px;
+  }
+}
+
+.mat-card {
+  max-width: 80%;
+  margin: 25px auto;
+}

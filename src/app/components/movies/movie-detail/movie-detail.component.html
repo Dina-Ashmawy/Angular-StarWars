@@ -1,0 +1,28 @@
+<mat-card *ngIf="film$ | async as film">
+  <mat-card-header>
+    <mat-card-title>
+      {{ film.title }}
+    </mat-card-title>
+    <mat-card-subtitle>{{ film.opening_crawl }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <h4 class="inline-header">Producer:</h4>
+      <label>{{ film.producer }}</label>
+    </div>
+    <div>
+      <h4 class="inline-header">Director:</h4>
+      <label>{{ film.director }}</label>
+    </div>
+    <div>
+      <h4 class="inline-header">Release Data:</h4>
+      <label>{{ film.release_date }}</label>
+    </div>
+    <div class="characters-container">
+      <h4>Characters:</h4>
+      <div *ngFor="let item of characters$ | async" class="character-name">
+        <span (click)="NavigateToCharacterDetails(item)">{{ item.name }}</span>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
